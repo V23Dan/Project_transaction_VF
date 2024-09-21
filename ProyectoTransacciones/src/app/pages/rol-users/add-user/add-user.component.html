@@ -1,0 +1,51 @@
+<div class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center z-50">
+  <!-- Modal con scroll en Y -->
+  <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md overflow-y-auto max-h-[80%]">
+    <h2 class="text-lg font-bold mb-4">Registrar Nuevo Usuario</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="registerUser()">
+      <!-- Campos del formulario -->
+      <div class="mb-4">
+        <label class="block text-gray-700">Nombre:</label>
+        <input type="text" formControlName="nombre" class="mt-1 p-2 w-full border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Documento:</label>
+        <input type="text" formControlName="documento" class="mt-1 p-2 w-full border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Edad:</label>
+        <input type="number" formControlName="edad" class="mt-1 p-2 w-full border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Sexo:</label>
+        <select formControlName="sexo" class="mt-1 p-2 w-full border rounded">
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Dirección:</label>
+        <input type="text" formControlName="direccion" class="mt-1 p-2 w-full border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Correo:</label>
+        <input type="email" formControlName="correo" class="mt-1 p-2 w-full border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Contraseña:</label>
+        <input type="password" formControlName="pass" class="mt-1 p-2 w-full border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Rol:</label>
+        <select formControlName="rol" class="mt-1 p-2 w-full border rounded">
+          <option value="Administrador">Administrador</option>
+          <option value="Usuario">Usuario</option>
+        </select>
+      </div>
+      <div class="flex justify-end">
+        <button type="button" (click)="closeModal.emit()" class="bg-gray-400 text-white px-4 py-2 rounded mr-2 hover:bg-red-600">Cancelar</button>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Registrar</button>
+      </div>
+    </form>
+  </div>
+</div>

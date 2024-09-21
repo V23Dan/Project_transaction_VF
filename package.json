@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "izitoast": "^1.4.0",
+    "ngx-cookie-service": "^18.0.0",
+    "sweetalert2": "^11.14.0"
+  }
+}

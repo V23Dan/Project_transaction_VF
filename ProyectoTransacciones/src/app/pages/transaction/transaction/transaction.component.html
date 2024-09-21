@@ -1,0 +1,17 @@
+<div
+  class="bg-gray-100 xl:w-[80%] lg:w-[75%] md:[75%] sm:w-[70%] absolute top-20 bottom-0 right-0 flex justify-around p-3"
+>
+  <section
+    class="w-full bg bg-white rounded-md shadow-md p-5 flex flex-wrap justify-center text-gray-800"
+  >
+    <!-- transaction.component.html -->
+    <div class="container">
+      <h2 class="text-xl font-medium">Transacciones del Usuario</h2>
+      <app-table [columns]="columns" [data]="transactions"></app-table>
+    </div>
+
+    <ng-template #noTransactions>
+      <p>No se encontraron transacciones para este usuario.</p>
+    </ng-template>
+  </section>
+</div>

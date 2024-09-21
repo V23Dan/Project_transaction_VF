@@ -1,0 +1,27 @@
+<div
+  class="bg-gray-100 xl:w-[80%] lg:w-[75%] md:[75%] sm:w-[70%] absolute top-20 bottom-0 right-0 flex justify-around p-3"
+>
+  <section
+    class="w-full bg bg-white rounded-md shadow-md p-5 flex flex-wrap justify-center text-gray-800"
+  >
+    <div class="container">
+      <div class="w-full p-1 flex justify-between items-center">
+        <h2 class="text-lg font-medium">Usuarios y roles</h2>
+        <button
+          class="p-[6px] bg-blue-500 text-white rounded-md"
+          (click)="showModal = true"
+        >
+          Agregar usuario
+        </button>
+      </div>
+      <app-table [columns]="columns" [data]="rolUsersArray"></app-table>
+    </div>
+    <app-add-user
+      *ngIf="showModal"
+      (closeModal)="showModal = false"
+    ></app-add-user>
+    <ng-template #noTransactions>
+      <p>No se encontraron transacciones para este usuario.</p>
+    </ng-template>
+  </section>
+</div>

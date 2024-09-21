@@ -1,0 +1,72 @@
+<div
+  class="bg-gray-100 xl:w-[80%] lg:w-[75%] md:w-full min-[500px]:w-full absolute top-20 bottom-0 right-0 flex justify-around p-5 text-gray-800"
+>
+  <section
+    class="w-[60%] bg bg-white rounded-md shadow-md p-5 flex flex-wrap justify-center"
+  >
+    <form action="" [formGroup]="formGroupRetreat">
+      <h1 class="w-full font-medium text-balance text-xl">
+        Retirar
+      </h1>
+      <div>
+        <div
+          class="py-2 px-8 h-[90px] rounded-md m-2 flex flex-wrap justify-between w-full items-center"
+        >
+          <label for="amount" class="text-md">Monto a retirar</label>
+          <input
+            type="number"
+            id="amount"
+            formControlName="amount"
+            class="border-2 w-full rounded-md p-2 placeholder:text-slate-400 placeholder:text-md focus:outline-none focus:border-blue-300"
+            placeholder="Monto"
+          />
+        </div>
+      </div>
+    </form>
+  </section>
+  <section class="w-[35%]">
+    <section
+      class="w-full h-[60%] bg-[#1A3A3A] rounded-md shadow-md p-9 flex flex-wrap justify-center text-white"
+    >
+      <div class="w-full">
+        <h1 class="w-full font-medium  text-balance text-xl">
+          Balance:
+        </h1>
+        <p
+          class="w-full font-medium xl:text-[42px] lg:text-[42px] md:text-[40px] sm:text-[36px] min-[500px]:text-[28px]"
+        >
+          $ {{accountData?.balance}}
+        </p>
+      </div>
+      <div class="w-full flex flex-wrap h-20 border-2 p-2 rounded-md">
+        <p class="w-full text-lg font-medium">Cuenta:</p>
+        <p class="w-full">{{accountData?.accountNumber}}</p>
+      </div>
+    </section>
+    <section
+      class="w-full h-[40%] p-9 flex flex-wrap justify-center text-gray-800"
+    >
+      <button
+        (click)="Retreat()"
+        class="bg-white p-3 rounded-md text-gray-800 font-semibold hover:bg-slate-200 w-[95%] border-2 m-3"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-8 w-full"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+          />
+        </svg>
+
+        Retirar
+      </button>
+    </section>
+  </section>
+</div>

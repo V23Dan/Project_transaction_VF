@@ -1,0 +1,118 @@
+<div
+  class="xl:w-[80%] lg:w-[75%] md:[75%] sm:w-[70%] absolute top-20 bottom-0 right-0 flex justify-around p-5 bg-gray-100"
+>
+  <section
+    class="w-[60%] bg bg-white rounded-md shadow-md p-9 flex flex-wrap justify-center text-gray-800"
+  >
+    <h1 class="w-full font-medium text-gray-800 text-xl">BIENVENIDO</h1>
+
+    <div class="w-full">
+      <h1 class="w-full font-medium text-gray-800 text-xl">Balance:</h1>
+      <p
+        class="w-full font-medium xl:text-[56px] lg:text-[56px] md:text-[42px] sm:text-[36px] min-[500px]:text-[36px] text-gray-800"
+      >
+        $ {{ accountData?.balance }}
+      </p>
+    </div>
+
+    <div
+      class="w-full flex justify-around items-center rounded-md bg-[#1A3A3A] text-white p-3 divide-x-2"
+    >
+      <div
+        class="w-[50%] flex justify-center items-center mb-2 text-center p-3"
+      >
+        <div class="flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-8 mr-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+            />
+          </svg>
+
+          <h2 class="w-full font-medium text-xl">
+            {{ userData?.nombre }}
+          </h2>
+        </div>
+      </div>
+      <div class="w-[50%] text-center">
+        <p class="w-full text-lg font-medium">Nro de cuenta:</p>
+        <p class="w-full">{{ accountData?.accountNumber }}</p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="flex flex-wrap justify-center rounded-md shadow-md bg-[#1A3A3A] w-[35%] p-3 items-baseline"
+  >
+    <h1 class="text-white font-medium text-xl">Transacciones:</h1>
+    <button
+      (click)="transfer()"
+      class="bg-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 rounded-md text-gray-800 font-medium hover:bg-slate-200 w-[95%] m-3"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-8 w-full"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
+        />
+      </svg>
+      Transferencias
+    </button>
+    <button
+      (click)="deposit()"
+      class="bg-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 rounded-md text-gray-800 font-medium hover:bg-slate-200 w-[95%] m-3"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-8 w-full"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5"
+        />
+      </svg>
+
+      Depositos
+    </button>
+    <button
+      (click)="retreat()"
+      class="bg-white p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 rounded-md text-gray-800 font-medium hover:bg-slate-200 w-[95%] m-3"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-8 w-full"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+        />
+      </svg>
+
+      Retiros
+    </button>
+  </section>
+</div>
